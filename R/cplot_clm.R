@@ -37,6 +37,11 @@ function(object,
          rug = TRUE,
          rug.col = col,
          rug.size = -0.02,
+         legend = TRUE,
+         legend.txt = levels(data[[yvar]]),
+         legend.pos = 'top',
+         legend.ncol = 3,
+         legend.cex = 1,
          ...) {
     
     xvar <- x
@@ -141,6 +146,10 @@ function(object,
         }
         if (isTRUE(rug) && is.numeric(data[[x]])) {
             draw_rug(data[[x]], rug.size = rug.size, rug.col = rug.col)
+        }
+        if (isTRUE(legend)){
+          legend(x = legend.pos, legend = legend.txt, lty = lty, col = col,
+                 ncol = legend.ncol, cex = legend.cex)
         }
     }
     

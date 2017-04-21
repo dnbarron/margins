@@ -42,7 +42,9 @@ cplot(object, ...)
   factor.fill = factor.col, factor.cex = 1L, xaxs = "i", yaxs = xaxs,
   las = 1L, scatter = FALSE, scatter.pch = 19L,
   scatter.col = factor.col, scatter.bg = scatter.col, scatter.cex = 0.5,
-  rug = TRUE, rug.col = col, rug.size = -0.02, ...)
+  rug = TRUE, rug.col = col, rug.size = -0.02, legend = TRUE,
+  legend.txt = levels(data[[yvar]]), legend.pos = "top", legend.ncol = 3,
+  ...)
 
 \method{cplot}{glm}(object,
   x = attributes(terms(object))[["term.labels"]][1L], dx = x,
